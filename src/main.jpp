@@ -1,0 +1,32 @@
+import System;
+import Externals.DOM;
+
+import Sily.Web.Browser;
+import Sily.Web.Canvas;
+
+import Sily.Math;
+
+onReady(void() {
+    var div = htmlToElement("<div>Hello World</div>");
+    var body = WebPage.body;
+    body.append(div);
+
+    Canvas canv = new Canvas(100, 100);
+    canv.fill(new Color(0.6f, 0.12f, 0.3f));
+    canv.line(0, 0, 40, 20, new Color(0.4f, 0.5f, 1f));
+});
+
+// class V {
+//     // check segfault with this
+//     public float ii;
+
+//     public V() {
+//         ii = 0;
+//     }
+    
+//     public string makeSegfault() {
+//         string db = "";
+//         db += ((double) ii).toString() + "a";
+//         return db;
+//     }
+// }
