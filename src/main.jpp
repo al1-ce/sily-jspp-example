@@ -2,7 +2,7 @@ import System;
 import Externals.DOM;
 
 import Sily.Web.Browser;
-import Sily.Web.Canvas;
+import Sily.Web.Canvases;
 
 import Sily.Math;
 
