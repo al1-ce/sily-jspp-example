@@ -6,11 +6,9 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "/c/jspp/jsppext.exe",
+            "command": "/e/jspp/jsppext.exe",
             "args": [
-                "src/",
-                "-o",
-                "js/"
+                "-b"
             ],
             "group": {
                 "kind": "build",
@@ -44,12 +42,11 @@
         {
             "label": "build-file",
             "type": "shell",
-            "command": "/c/jspp/jsppext.exe",
+            "command": "/e/jspp/jsppext.exe",
             "args": [
                 "${command:extension.commandvariable.file.relativeFilePosix}",
                 "-o",
                 "js/",
-                "-v"
             ],
             "group": {
                 "kind": "build"

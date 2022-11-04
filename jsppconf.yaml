@@ -1,0 +1,11 @@
+name: sily.jspp example
+description: Example usage of sily lib
+authors: Alisa Lain
+copyright: Copyright (c) 2022, Alisa Lain
+license: MIT license
+build:
+    default: 
+        sourcePath: src/
+        outputPath: js/
+        debug: no
+defaultBuild: default

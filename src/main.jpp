@@ -1,20 +1,33 @@
-import System;
-import Externals.DOM;
+import std;
+import externals.dom;
 
-import Sily.Web.Browser;
-import Sily.Web.Canvases;
+import sily.web.browser;
+import sily.web.canvas;
 
-import Sily.Math;
+import sily.math;
 
-onReady(void() {
+alias col = new Color;
+alias cos = Math.cos;
+alias sin = Math.sin;
+
+Canvas canv = new Canvas(100, 100);
+
+int frame = 0;
+
+void loop() {
+    frame++;
+
+    canv.fill(col(0.7f, 0.62f, 0.75f));
+    canv.line(50, 50, 50 + cos(frame / 60d) * 40, 50 + sin(frame / 60d) * 40, col(0.4f, 0.5f, 1f));
+}
+
+void main() {
     var div = htmlToElement("<div>Hello World</div>");
     var body = WebPage.body;
     body.append(div);
 
-    Canvas canv = new Canvas(100, 100);
-    canv.fill(new Color(0.6f, 0.12f, 0.3f));
-    canv.line(0, 0, 40, 20, new Color(0.4f, 0.5f, 1f));
-});
+    setInterval(loop, 1000 / 60);
+}
 
 // class V {
 //     // check segfault with this
