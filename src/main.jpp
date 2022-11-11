@@ -28,18 +28,3 @@ void main() {
 
     setInterval(loop, 1000 / 60);
 }
-
-// class V {
-//     // check segfault with this
-//     public float ii;
-
-//     public V() {
-//         ii = 0;
-//     }
-    
-//     public string makeSegfault() {
-//         string db = "";
-//         db += ((double) ii).toString() + "a";
-//         return db;
-//     }
-// }

@@ -8,4 +8,5 @@ build:
         sourcePath: src/
         outputPath: js/
         debug: no
+        async: no
 defaultBuild: default

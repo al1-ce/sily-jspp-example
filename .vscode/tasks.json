@@ -14,23 +14,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                {
-                    "owner": "js++",
-                    "source": "js++",
-                    "pattern": [
-                        {
-                            "file": 1,
-                            "line": 2,
-                            "column": 3,
-                            "severity": 4,
-                            "code": 5,
-                            "message": 6,
-                            "regexp": "(.*?)\\((\\d+)\\,(\\d+)\\)\\: (Error|Warning)\\[(.*?)\\]\\: (.*)"
-                        }
-                    ]
-                }
-            ],
+            "problemMatcher": ["$jsppext"],
             "presentation": {
                 "reveal": "silent",
                 "revealProblems": "onProblem",
@@ -51,23 +35,7 @@
             "group": {
                 "kind": "build"
             },
-            "problemMatcher": [
-                {
-                    "owner": "js++",
-                    "source": "js++",
-                    "pattern": [
-                        {
-                            "file": 1,
-                            "line": 2,
-                            "column": 3,
-                            "severity": 4,
-                            "code": 5,
-                            "message": 6,
-                            "regexp": "(.*?)\\((\\d+)\\,(\\d+)\\)\\: (Error|Warning)\\[(.*?)\\]\\: (.*)"
-                        }
-                    ]
-                }
-            ],
+            "problemMatcher": ["$jsppext"],
             "presentation": {
                 "reveal": "silent",
                 "revealProblems": "onProblem",
