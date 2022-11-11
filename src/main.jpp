@@ -9,6 +9,7 @@ import sily.math;
 alias col = new Color;
 alias cos = Math.cos;
 alias sin = Math.sin;
+alias println = Console.log;
 
 Canvas canv = new Canvas(100, 100);
 
@@ -21,10 +22,24 @@ void loop() {
     canv.line(50, 50, 50 + cos(frame / 60d) * 40, 50 + sin(frame / 60d) * 40, col(0.4f, 0.5f, 1f));
 }
 
-void main() {
+
+async function sleep(int ms) {
+    return new Promise(void(external resolve) {
+        setTimeout(resolve, ms);
+    });
+}
+
+async void main() {
     var div = htmlToElement("<div>Hello World</div>");
     var body = WebPage.body;
     body.append(div);
 
     setInterval(loop, 1000 / 60);
+
+    Benchmark bench = new Benchmark();
+    bench.start();
+    await sleep(1233);
+    bench.stop();
+
+    println(bench.duration); // should print 1234
 }
